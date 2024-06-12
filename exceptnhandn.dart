@@ -40,15 +40,23 @@ try{
   print("this is a FINALLY CLAUSE and its always executed");
   
 }
+print(""); 
 
-print(""); print("case 5");
+print("case 5");
 // CUSTOM EXCEPTION
-depositMoney(-200);
+try{depositMoney(-200);
+} catch (e) {
+  print("$e You cannot enter amount less than 0");
+} // optional finally
+finally{
+  print("You cannot enter amount less than 0");
+}
 }
 
 class DepositException implements Exception {
-errorMessage(){
-    print("You cannot enter amount less than 0");
+ String errorMessage(){
+  return "You cannot enter amount less than 0";
+  
   }
 }
 
