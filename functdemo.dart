@@ -1,5 +1,5 @@
 void main(){
-findperimeter(4, 2);
+//findperimeter(4, 2);
 int rectArea = getArea(4, 5);
 print("the area is $rectArea");
 }
